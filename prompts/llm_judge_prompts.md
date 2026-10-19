@@ -2,7 +2,7 @@
 
 Prompt of `discourse_analysis/scripts/compute_llm_judgments.py`, one request per turn and tag, sent to Ollama with `think: false` and the system message `Reasoning: low`. Model: Qwen3.6-35B-A3B-FP8 (Ollama tag `qwen3.6:35b-a3b`). `{transcript}` is the conversation in English, one `USER:` or `AGENT:` line per turn, the judged turn prefixed with `>>> `.
 
-## Judge prompt
+## Prompt 16: LLM judge
 
 ```text
 You are annotating a conversation between a user and a political voting-advice chatbot.

@@ -8,7 +8,7 @@ Data, prompts, and analysis code of the paper
 
 | Folder | Content | Paper |
 |---|---|---|
-| `prompts/` | the chatbot's system prompts (Prompts 1 to 15) and the LLM-judge prompt | Sections 3 and 4 |
+| `prompts/` | the chatbot's system prompts (Prompts 1 to 15) and the LLM-judge prompt (Prompt 16) | Sections 3 and 4 |
 | `evaluation/` | module benchmarks: evaluated messages, retrieval corpus, run reports | Section 3 |
 | `data/` | the user-study data, see below | Sections 4 and 5 |
 | `notebooks/` | `stance_classification.ipynb` (stance module on user turns and the smartvote benchmark), `dropout_analysis.ipynb`, `dialogue_strategies.ipynb` (post-survey effects, `figures/effect_sizes.pdf`), `covariate_analysis.ipynb` (adjusted effects) | Section 5 |
