@@ -1,0 +1,31 @@
+condition,n,ngram,count
+Assistant,1,eu,33
+Assistant,1,switzerland,28
+Assistant,1,power,27
+Assistant,1,nuclear,26
+Assistant,1,no,22
+Assistant,2,nuclear power,24
+Assistant,2,power plants,17
+Assistant,2,closer relations,10
+Assistant,2,retirement age,8
+Assistant,2,new nuclear,7
+Assistant,3,nuclear power plants,17
+Assistant,3,new nuclear power,7
+Assistant,3,nuclear power plant,7
+Assistant,3,equal educational opportunities,4
+Assistant,3,need nuclear power,4
+Interview,1,yes,94
+Interview,1,no,76
+Interview,1,more,22
+Interview,1,switzerland,15
+Interview,1,don't,12
+Interview,2,yes yes,27
+Interview,2,no no,13
+Interview,2,yes please,9
+Interview,2,retirement age,8
+Interview,2,yes no,8
+Interview,3,yes yes yes,9
+Interview,3,nuclear power plants,4
+Interview,3,yes yes no,3
+Interview,3,no further question,3
+Interview,3,no more questions,3

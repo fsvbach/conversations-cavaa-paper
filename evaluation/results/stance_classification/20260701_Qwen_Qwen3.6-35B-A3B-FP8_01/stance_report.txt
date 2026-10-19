@@ -1,0 +1,42 @@
+=================================================================
+STANCE CLASSIFICATION EVALUATION
+=================================================================
+  Date        : 2026-07-01 13:54:43
+  Run         : #01
+  Model       : Qwen/Qwen3.6-35B-A3B-FP8
+  Dataset     : datasets/stance_ground_truth.csv
+  Total cases : 11295  |  Active: 11295  |  Errors: 0
+
+─────────────────────────────────────────────────────────────────
+  Accuracy        : 54.1%  (6108/11295)
+  Macro Precision : 55.1%
+  Macro Recall    : 36.8%
+  Macro F1        : 37.1%
+
+  Label                  n    TP    FP    FN     Prec     Rec      F1
+  ------------------ ----- ----- ----- -----  ------- ------- -------
+  agree               3267  1900   686  1367    73.5%   58.2%   64.9%
+  rather_agree        2627  1372  1749  1255    44.0%   52.2%   47.7%
+  neutral              299     0     0   299   100.0%    0.0%    0.0%
+  rather_disagree     2106  1104  1638  1002    40.3%   52.4%   45.5%
+  disagree            2996  1732   634  1264    73.2%   57.8%   64.6%
+  irrelevant             0     0   480     0     0.0%    0.0%    0.0%
+
+─────────────────────────────────────────────────────────────────
+  Category breakdown:
+    Democracy, Media & Digitization      n= 703  acc=54.5%
+    Economy & labour                     n= 758  acc=56.1%
+    Education                            n= 712  acc=51.1%
+    Energy & transport                   n=1272  acc=59.2%
+    Federal budget                       n= 668  acc=41.2%
+    Finances & taxes                     n= 664  acc=55.4%
+    Foreign trade & foreign policy       n= 513  acc=61.2%
+    Health                               n=1002  acc=56.6%
+    Immigration & integration            n= 679  acc=55.4%
+    Nature conservation                  n= 669  acc=55.6%
+    Security & military                  n= 539  acc=56.0%
+    Society & ethics                     n= 639  acc=59.3%
+    Values                               n=1000  acc=45.9%
+    Welfare state & family               n=1477  acc=52.2%
+
+=================================================================

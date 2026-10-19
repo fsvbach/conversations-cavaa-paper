@@ -1,0 +1,246 @@
+=================================================================
+RETRIEVAL EVALUATION
+=================================================================
+  Date        : 2026-06-04 16:16:26
+  Run         : #10
+  LLM model   : Qwen/Qwen3.6-35B-A3B-FP8
+  Embed model : Qwen/Qwen3-Embedding-8B
+  Dataset     : datasets/generated/retrieval_eval.json
+  Total cases : 682  |  Active: 682  |  Skipped (unlabeled): 0  |  Errors: 0
+
+─────────────────────────────────────────────────────────────────
+AGGREGATE METRICS
+─────────────────────────────────────────────────────────────────
+  Recall@5      : 36.5%
+  Precision@5   : 27.6%
+  Recall@10     : 55.1%
+  Precision@10  : 22.7%
+  Recall@30     : 81.1%
+  Precision@30  : 12.1%
+  MRR         : 0.4581
+
+─────────────────────────────────────────────────────────────────
+BY CATEGORY
+─────────────────────────────────────────────────────────────────
+  Category                      n     R@5      R@10     R@30     MRR
+  ────────────────────────────  ────  ───────  ───────  ───────  ────────
+  general_overview              55    14.9%    22.7%    49.7%    0.5127
+  party_comparison              110   33.0%    55.5%    88.0%    0.4894
+  party_ideology                55    27.0%    45.2%    73.2%    0.6380
+  party_position                385   41.2%    59.8%    84.4%    0.4067
+  party_rationale               77    40.3%    61.7%    83.0%    0.5030
+
+  Missed — no relevant passage in top-5:
+      [p002] [party_position]  Von einer freien Marktwirtschaft profiti  Wie stehen die Grünen zu dieser These?
+      [p002a] [party_position]  Von einer freien Marktwirtschaft profiti  Wie beurteilen die Grüne diese These?
+      [p002b] [party_position]  Von einer freien Marktwirtschaft profiti  Wie positionieren sich die Grüne zu dieser Aussage
+      [p002c] [party_position]  Von einer freien Marktwirtschaft profiti  Welche Haltung haben die Grüne gegenüber dieser Th
+      [p002d] [party_position]  Von einer freien Marktwirtschaft profiti  Inwiefern unterstützen die Grüne diese These?
+      [p002e] [party_position]  Von einer freien Marktwirtschaft profiti  Was halten die Grüne davon?
+      [p002f] [party_position]  Von einer freien Marktwirtschaft profiti  Wie sehen die Grüne auf diese These?
+      [p002g] [party_position]  Von einer freien Marktwirtschaft profiti  Wie beurteilen die Grüne diese These?
+      [p002h] [party_position]  Von einer freien Marktwirtschaft profiti  Welche Position beziehen die Grüne auf diese These
+      [p002i] [party_position]  Von einer freien Marktwirtschaft profiti  Grüne Haltung zur These?
+      [p002j] [party_position]  Von einer freien Marktwirtschaft profiti  Diese These: Grüne Position?
+      [p003d] [party_position]  Von einer freien Marktwirtschaft profiti  Inwiefern stimmt die EVP mit dieser Aussage überei
+      [p003g] [party_position]  Von einer freien Marktwirtschaft profiti  Welche Haltung vertritt die EVP gegenüber dieser A
+      [p004] [party_position]  Von einer freien Marktwirtschaft profiti  Was denkt die GLP dazu?
+      [p005] [party_position]  Von einer freien Marktwirtschaft profiti  Was ist die Haltung der Mitte-Partei dazu?
+      [p005a] [party_position]  Von einer freien Marktwirtschaft profiti  Welche Position vertritt die Mitte-Partei zu der f
+      [p005b] [party_position]  Von einer freien Marktwirtschaft profiti  Wie beurteilt die Mitte-Partei die freie Marktwirt
+      [p005c] [party_position]  Von einer freien Marktwirtschaft profiti  Wie sieht die Meinung der Mitte-Partei bezüglich d
+      [p005d] [party_position]  Von einer freien Marktwirtschaft profiti  Welche Haltung hat die Mitte-Partei gegenüber der 
+      [p005e] [party_position]  Von einer freien Marktwirtschaft profiti  Was denkt die Mitte-Partei über die freie Marktwir
+      [p005g] [party_position]  Von einer freien Marktwirtschaft profiti  Welche Haltung vertritt die Mitte-Partei hinsichtl
+      [p005h] [party_position]  Von einer freien Marktwirtschaft profiti  Wie beurteilt die Mitte-Partei die freie Marktwirt
+      [p005i] [party_position]  Von einer freien Marktwirtschaft profiti  Mitte-Partei zu freier Marktwirtschaft?
+      [p006] [party_position]  Von einer freien Marktwirtschaft profiti  Wie positioniert sich die FDP zu dieser These?
+      [p006a] [party_position]  Von einer freien Marktwirtschaft profiti  Wie stellt sich die FDP zu dieser Aussage?
+      [p006b] [party_position]  Von einer freien Marktwirtschaft profiti  Wie hält sich die FDP gegenüber dieser Behauptung?
+      [p006c] [party_position]  Von einer freien Marktwirtschaft profiti  In welcher Weise positioniert sich die FDP gegenüb
+      [p006d] [party_position]  Von einer freien Marktwirtschaft profiti  Welche Haltung hat die FDP zu dieser These?
+      [p006e] [party_position]  Von einer freien Marktwirtschaft profiti  Wie denkt die FDP über diese These?
+      [p006f] [party_position]  Von einer freien Marktwirtschaft profiti  Was sagt die FDP dazu?
+      [p006g] [party_position]  Von einer freien Marktwirtschaft profiti  Welche Position vertritt die FDP bezüglich dieser 
+      [p006h] [party_position]  Von einer freien Marktwirtschaft profiti  In welcher Form positioniert sich die FDP zu diese
+      [p006j] [party_position]  Von einer freien Marktwirtschaft profiti  Position der FDP zu dieser These?
+      [p009h] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Haltung vertritt die Partei zur These?
+      [p009j] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Bundesfinanzierung Sozialwohlfahrt – Grüne Stellun
+      [p010] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Was ist die Position der EVP in dieser Frage?
+      [p010a] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Haltung vertritt die EVP bezüglich dieser F
+      [p010b] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  In welcher Stellungnahme steht die EVP zu dieser F
+      [p010c] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie sieht die Position der EVP bezüglich der Frage
+      [p010d] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Meinung gibt die EVP zur Frage, ob der Bund
+      [p010e] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie denkt die EVP über diese Frage??
+      [p010f] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Was meint die EVP zu dieser Frage?
+      [p010g] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Position nimmt die EVP bezüglich der Frage 
+      [p010h] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie steht die EVP in Bezug auf die Frage, ob der B
+      [p010i] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  EVP-Stellungnahme zur Frage
+      [p010j] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  EVP: Position zur Sozialfrage
+      [p011e] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Was meint die GLP dazu?
+      [p012] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Was ist die Haltung der Mitte-Partei dazu?
+      [p012a] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Position vertritt die Mitte-Partei hinsicht
+      [p012b] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie sieht die Meinung der Mitte-Partei zur Steiger
+      [p012c] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie positioniert sich die Mitte-Partei bezüglich d
+      [p012d] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Haltung hat die Mitte-Partei gegenüber der 
+      [p012e] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Was denkt die Mitte-Partei über mehr Bundesgeld fü
+      [p012f] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie sieht es bei der Mitte-Partei mit der Bundesfi
+      [p012g] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie lautet die Position der Mitte-Partei hinsichtl
+      [p012h] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche finanzielle Ausrichtung vertritt die Mitte-
+      [p012i] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Mitte-Partei: Soziale Wohlfahrt und Bundesausgaben
+      [p012j] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Mitte-Partei – Position zur Sozialausgaben-Steiger
+      [p013] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie positioniert sich die FDP zu dieser These?
+      [p013a] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie sieht die Haltung der FDP zu dieser Aussage?
+      [p013c] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Position vertritt die FDP gegenüber dieser 
+      [p013d] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie steht die FDP zu dieser These?
+      [p013e] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie denkt die FDP über diese These?
+      [p013h] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Haltung vertritt die FDP gegenüber der Thes
+      [p013i] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  FDP-Position zur These?
+      [p013j] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie steht die FDP dazu?
+      [p014c] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Wie sieht die Position der SVP bezüglich der Sozia
+      [p014d] [party_position]  Soll der Bund im Bereich Soziale Wohlfah  Welche Haltung hat die SVP zu der Frage, ob der Bu
+      [p015i] [party_position]  Soll sich der Staat stärker für gleiche   SP-Stellungnahme zu gleicher Bildungschance?
+      [p017] [party_position]  Soll sich der Staat stärker für gleiche   Was ist die Position der EVP in dieser Frage?
+      [p017a] [party_position]  Soll sich der Staat stärker für gleiche   Wie sieht die Haltung der EVP zu dieser Frage aus?
+      [p017b] [party_position]  Soll sich der Staat stärker für gleiche   Welche Position vertritt die EVP in dieser Angeleg
+      [p017c] [party_position]  Soll sich der Staat stärker für gleiche   Wie positioniert sich die EVP zu der Frage der gle
+      [p017d] [party_position]  Soll sich der Staat stärker für gleiche   In welcher Weise steht die EVP zu dieser Bildungsc
+      [p017e] [party_position]  Soll sich der Staat stärker für gleiche   Wie ist die Meinung der EVP zu gleichen Bildungsch
+      [p017f] [party_position]  Soll sich der Staat stärker für gleiche   Was sagt die EVP zu der Frage der gleichen Bildung
+      [p017g] [party_position]  Soll sich der Staat stärker für gleiche   Welche Haltung vertritt die EVP bezüglich der Frag
+      [p017h] [party_position]  Soll sich der Staat stärker für gleiche   In welcher Weise positioniert sich die EVP zu dies
+      [p017i] [party_position]  Soll sich der Staat stärker für gleiche   EVP-Haltung zu gleichen Bildungschancen?
+      [p017j] [party_position]  Soll sich der Staat stärker für gleiche   Position der EVP zu Bildungschancengleichheit?
+      [p018] [party_position]  Soll sich der Staat stärker für gleiche   Was denkt die GLP dazu?
+      [p018a] [party_position]  Soll sich der Staat stärker für gleiche   Was ist die Meinung der GLP zu gleichen Bildungsch
+      [p018g] [party_position]  Soll sich der Staat stärker für gleiche   Wie beurteilt die GLP die Rolle des Staates bei gl
+      [p018j] [party_position]  Soll sich der Staat stärker für gleiche   Staatliche Bildungschancen: GLP?
+      [p019] [party_position]  Soll sich der Staat stärker für gleiche   Was ist die Haltung der Mitte-Partei dazu?
+      [p019a] [party_position]  Soll sich der Staat stärker für gleiche   Was ist die Position der Mitte-Partei dazu?
+      [p019b] [party_position]  Soll sich der Staat stärker für gleiche   Was ist die Meinung der Mitte-Partei dazu?
+      [p019c] [party_position]  Soll sich der Staat stärker für gleiche   Wie positioniert sich die Mitte-Partei zu gleichen
+      [p019d] [party_position]  Soll sich der Staat stärker für gleiche   Wie sieht die Haltung der Mitte-Partei gegenüber g
+      [p019e] [party_position]  Soll sich der Staat stärker für gleiche   Was denkt die Mitte-Partei über gleiche Bildungsch
+      [p019f] [party_position]  Soll sich der Staat stärker für gleiche   Wie ist die Meinung der Mitte-Partei zu gleichen B
+      [p019g] [party_position]  Soll sich der Staat stärker für gleiche   Wie beurteilt die Mitte-Partei die Frage der gleic
+      [p019h] [party_position]  Soll sich der Staat stärker für gleiche   Welche Haltung vertritt die Mitte-Partei hinsichtl
+      [p019i] [party_position]  Soll sich der Staat stärker für gleiche   Mitte-Partei zu gleichen Bildungschancen?
+      [p019j] [party_position]  Soll sich der Staat stärker für gleiche   Haltung der Mitte-Partei zu Bildungschancen?
+      [p024] [party_position]  Befürworten Sie engere Beziehungen zur E  Was ist die Position der EVP in dieser Frage?
+      [p024a] [party_position]  Befürworten Sie engere Beziehungen zur E  Welche Stellungnahme gibt die EVP zu dieser Frage?
+      [p024b] [party_position]  Befürworten Sie engere Beziehungen zur E  Wie sieht die Haltung der EVP bezüglich dieser Fra
+      [p024c] [party_position]  Befürworten Sie engere Beziehungen zur E  Wie steht die EVP zu dieser Frage?
+      [p024d] [party_position]  Befürworten Sie engere Beziehungen zur E  Welche Position vertritt die EVP in dieser Angeleg
+      [p024e] [party_position]  Befürworten Sie engere Beziehungen zur E  Wie denkt die EVP über diese Frage?
+      [p024f] [party_position]  Befürworten Sie engere Beziehungen zur E  Was ist die Meinung der EVP zu dieser Angelegenhei
+      [p024g] [party_position]  Befürworten Sie engere Beziehungen zur E  Welche Haltung vertritt die EVP in dieser Frage?
+      [p024h] [party_position]  Befürworten Sie engere Beziehungen zur E  Wie positioniert sich die EVP bezüglich dieser The
+      [p024i] [party_position]  Befürworten Sie engere Beziehungen zur E  EVP-Stellungnahme zu EU-Beziehungen
+      [p024j] [party_position]  Befürworten Sie engere Beziehungen zur E  EVP und EU-Beziehungen
+      [p026] [party_position]  Befürworten Sie engere Beziehungen zur E  Was ist die Haltung der Mitte-Partei zur EU?
+      [p026a] [party_position]  Befürworten Sie engere Beziehungen zur E  Welche Position vertritt die Mitte-Partei gegenübe
+      [p026b] [party_position]  Befürworten Sie engere Beziehungen zur E  Wie steht die Mitte-Partei zu den Beziehungen mit 
+      [p026c] [party_position]  Befürworten Sie engere Beziehungen zur E  Wie sieht die Haltung der Mitte-Partei gegenüber d
+      [p026d] [party_position]  Befürworten Sie engere Beziehungen zur E  Welche Einstellung hat die Mitte-Partei zur Europä
+      [p026e] [party_position]  Befürworten Sie engere Beziehungen zur E  Wie denkt die Mitte-Partei über die EU?
+      [p026f] [party_position]  Befürworten Sie engere Beziehungen zur E  Was meint die Mitte-Partei zu den EU-Beziehungen?
+      [p026g] [party_position]  Befürworten Sie engere Beziehungen zur E  Wie vertritt die Mitte-Partei ihre Haltung gegenüb
+      [p026h] [party_position]  Befürworten Sie engere Beziehungen zur E  Welche Position der Mitte-Partei zur EU ist releva
+      [p026i] [party_position]  Befürworten Sie engere Beziehungen zur E  EU und Mitte-Partei
+      [p026j] [party_position]  Befürworten Sie engere Beziehungen zur E  Mitte-Partei zu der EU
+      [p029] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie lautet die Position der SP zu dieser These?
+      [p029a] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Haltung vertritt die SP gegenüber der These
+      [p029b] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie steht die SP zu der Aussage, dass der Umweltsc
+      [p029c] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Position hat die SP bezüglich der These, da
+      [p029e] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Was meint die SP dazu, dass der Umweltschutz wicht
+      [p029f] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie denkt die SP über die These, dass Umwelt schüt
+      [p029g] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Präferenz gibt die SP für die Priorisierung
+      [p029h] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie positioniert sich die SP in Bezug auf die Thes
+      [p029i] [party_position]  Ein stärkerer Umweltschutz ist notwendig  SP-Stellungnahme zur These
+      [p029j] [party_position]  Ein stärkerer Umweltschutz ist notwendig  SP zur These: Umweltschutz vs. Wirtschaftswachstum
+      [p030b] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Haltung vertritt die Partei zur Notwendigke
+      [p030g] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie beurteilen die Grünen die These, dass stärkere
+      [p031i] [party_position]  Ein stärkerer Umweltschutz ist notwendig  EVP-Stellungnahme?
+      [p032e] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Was hält die GLP von einem strengeren Umweltschutz
+      [p032g] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Haltung vertritt die GLP gegenüber der Notw
+      [p032j] [party_position]  Ein stärkerer Umweltschutz ist notwendig  GLP: Umwelt oder Wirtschaft?
+      [p033] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Was ist die Haltung der Mitte-Partei dazu?
+      [p033a] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Position vertritt die Mitte-Partei zu einer
+      [p033b] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie sieht die Stellungnahme der Mitte-Partei zu ei
+      [p033c] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie bewertet die Mitte-Partei die Notwendigkeit ei
+      [p033d] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Haltung hat die Mitte-Partei gegenüber der 
+      [p033f] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie steht die Mitte-Partei zu Umwelt und Wirtschaf
+      [p033g] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie beurteilt die Mitte-Partei die notwendige Vers
+      [p033h] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Position vertritt die Mitte-Partei in Bezug
+      [p033i] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Mitte-Partei: Umweltschutz vs. Wirtschaft?
+      [p033j] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Position der Mitte-Partei zu Umwelt und Wirtschaft
+      [p034] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie positioniert sich die FDP zu dieser These?
+      [p034a] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie stellt sich die FDP zu dieser These ein?
+      [p034b] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie hält sich die FDP gegenüber dieser These?
+      [p034c] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Welche Haltung nimmt die FDP gegenüber dieser Thes
+      [p034d] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie sieht die Position der FDP zur These aus?
+      [p034e] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Was meint die FDP dazu?
+      [p034f] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie denkt die FDP über diese These?
+      [p034g] [party_position]  Ein stärkerer Umweltschutz ist notwendig  Wie steht die FDP zu dieser These?
+      [p034h] [party_position]  Ein stärkerer Umweltschutz ist notwendig  In welcher Weise positioniert sich die FDP gegenüb
+      [p034i] [party_position]  Ein stärkerer Umweltschutz ist notwendig  FDP-Stellungnahme zur These?
+      [p034j] [party_position]  Ein stärkerer Umweltschutz ist notwendig  FDP-Haltung zur Umwelt-These?
+      [p036] [general_overview]  Von einer freien Marktwirtschaft profiti  Was denken die verschiedenen Parteien und Kandidie
+      [p036a] [general_overview]  Von einer freien Marktwirtschaft profiti  Was meinen die verschiedenen Parteien und Kandidie
+      [p036b] [general_overview]  Von einer freien Marktwirtschaft profiti  Was sagen die verschiedenen Parteien und Kandidier
+      [p036c] [general_overview]  Von einer freien Marktwirtschaft profiti  Wie bewerten die verschiedenen Parteien und Kandid
+      [p036d] [general_overview]  Von einer freien Marktwirtschaft profiti  Welche Meinung haben die verschiedenen Parteien un
+      [p036e] [general_overview]  Von einer freien Marktwirtschaft profiti  Was halten die verschiedenen Parteien und Kandidie
+      [p036f] [general_overview]  Von einer freien Marktwirtschaft profiti  Was meint ihr, was die verschiedenen Parteien und 
+      [p036g] [general_overview]  Von einer freien Marktwirtschaft profiti  Wie positionieren sich die verschiedenen Parteien 
+      [p036h] [general_overview]  Von einer freien Marktwirtschaft profiti  Welche Haltung nehmen die verschiedenen Parteien u
+      [p036i] [general_overview]  Von einer freien Marktwirtschaft profiti  Parteien und Kandidierende zu dieser These?
+      [p036j] [general_overview]  Von einer freien Marktwirtschaft profiti  Meinung der Parteien und Kandidierenden zu dieser 
+      [p038f] [general_overview]  Soll sich der Staat stärker für gleiche   Wie denken die Parteien und Kandidierenden darüber
+      [p042] [party_comparison]  Von einer freien Marktwirtschaft profiti  Wie vergleichen sich die Positionen der Grünen und
+      [p042c] [party_comparison]  Von einer freien Marktwirtschaft profiti  Inwiefern stimmen die Grünen und die SVP in ihren 
+      [p042i] [party_comparison]  Von einer freien Marktwirtschaft profiti  Grüne vs. SVP: Welche Positionen?
+      [p044j] [party_comparison]  Soll der Bund im Bereich Soziale Wohlfah  EVP/FDP: Position zu Sozialwohlfahrt-Aussage
+      [p046] [party_comparison]  Soll sich der Staat stärker für gleiche   Welche Gemeinsamkeiten und Unterschiede bestehen z
+      [p050] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  Inwiefern unterscheiden sich die Positionen von SP
+      [p050a] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  Inwiefern weichen die Haltungen der SP und EVP in 
+      [p050b] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  Wie unterschiedlich sind die Positionen der SP und
+      [p050c] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  Welche Unterschiede bestehen zwischen den Ansichte
+      [p050d] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  In welchem Umfang divergieren die Positionen der S
+      [p050e] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  Wie sehen die Unterschiede zwischen SP und EVP in 
+      [p050f] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  Welche Haltung haben die Parteien SP und EVP zu di
+      [p050g] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  In welchem Ausmass unterscheiden sich die Position
+      [p050h] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  Welche Differenzen bestehen zwischen den Haltungen
+      [p050i] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  SP vs. EVP: Unterschiede in der Umweltfrage?
+      [p050j] [party_comparison]  Ein stärkerer Umweltschutz ist notwendig  Positionsdifferenzen zwischen SP und EVP?
+      [p052j] [party_rationale]  Von einer freien Marktwirtschaft profiti  Argumente der SP gegen volle Freiheit der Märkte
+      [p053j] [party_rationale]  Soll der Bund im Bereich Soziale Wohlfah  Gründe für die SVP's Ablehnung von Sozialausgaben
+      [p056] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  Wie argumentiert die EVP zu diesem Thema?
+      [p056a] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  Wie meint die EVP zu dieser Frage?
+      [p056b] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  Welche Position vertritt die EVP zu diesem Thema?
+      [p056c] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  Welche Argumente bringt die EVP vor?
+      [p056d] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  Wie sieht die Position der EVP bezüglich der Ausga
+      [p056e] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  Was sagt die EVP dazu?
+      [p056f] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  Wie denkt die EVP darüber?
+      [p056g] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  In welcher Weise positioniert sich die EVP zu dies
+      [p056h] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  Welche Position vertritt die EVP bezüglich der Soz
+      [p056i] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  EVP-Position zur Ausgabensteigerung
+      [p056j] [party_rationale]  Soll der Bund im Bereich 'Soziale Wohlfa  EVP-Arbeitsweise in der Sozialwohlfahrt
+      [p057] [party_rationale]  Ein stärkerer Umweltschutz ist notwendig  Welche Argumente bringt die Mitte zu diesem Thema 
+      [p057a] [party_rationale]  Ein stärkerer Umweltschutz ist notwendig  Welche Positionen vertritt die Mitte bezüglich die
+      [p057c] [party_rationale]  Ein stärkerer Umweltschutz ist notwendig  Welche Argumente legt die Mitte in Bezug auf diese
+      [p057d] [party_rationale]  Ein stärkerer Umweltschutz ist notwendig  Welche Haltung vertritt die Mitte zu diesem Thema?
+      [p057g] [party_rationale]  Ein stärkerer Umweltschutz ist notwendig  Welche Argumente legt die Mitte bezüglich dieses T
+      [p057h] [party_rationale]  Ein stärkerer Umweltschutz ist notwendig  Welche Positionen vertritt die Mitte in Bezug auf 
+      [p095] [party_ideology]  Befürworten Sie engere Beziehungen zur E  Wie würden Sie die SVP ideologisch einordnen?
+      [p097] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Was macht die Mitte-Partei zur politischen Mitte?
+      [p097a] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Was bestimmt die Mitte-Partei als politischen Mitt
+      [p097b] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Welche Rolle spielt die Mitte-Partei als politisch
+      [p097c] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Warum ist die Mitte-Partei die politische Mitte?
+      [p097d] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Inwiefern ist die Mitte-Partei zur politischen Mit
+      [p097e] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Was ist das Geheimnis, warum die Mitte-Partei die 
+      [p097g] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Welche Faktoren tragen dazu bei, dass die Mitte-Pa
+      [p097i] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Mitte-Partei: Warum politische Mitte?
+      [p097j] [party_ideology]  Ein stärkerer Umweltschutz ist notwendig  Politische Mitte: Mitte-Partei?
+
+=================================================================

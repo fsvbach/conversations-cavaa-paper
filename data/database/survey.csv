@@ -1,0 +1,5 @@
+id,code,name,chatbot,numAnswerButtons,minChatMessages,ignoreNeutral,showEndButton,allowContinueAfterEnd,language,createdOn
+1,-Jzttj,Public Demo,none,5,,False,True,True,de,2026-07-23 16:07:49.940402+00:00
+2,2539ad,Everything Mixed,none,5,,False,True,True,de,2026-07-23 16:07:50.124033+00:00
+3,d6a57f,Assistant,assistant,5,4.0,False,False,False,de,2026-07-23 16:09:01.567767+00:00
+4,489d36,Interview,interview,5,,False,False,False,de,2026-07-23 16:09:02.029299+00:00

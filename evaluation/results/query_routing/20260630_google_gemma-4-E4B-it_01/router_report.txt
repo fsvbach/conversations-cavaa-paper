@@ -1,0 +1,271 @@
+=================================================================
+ROUTER EVALUATION
+=================================================================
+  Date        : 2026-06-30 12:00:24
+  Run         : #01
+  Model       : google/gemma-4-E4B-it
+  Dataset     : datasets/generated/router_eval.json
+  Total cases : 1012  |  Active: 1012  |  Skipped: 0  |  Errors: 0
+
+─────────────────────────────────────────────────────────────────
+  Macro Precision : 96.9%
+  Macro Recall    : 95.8%
+  Macro F1        : 94.2%
+
+  No-retrieval accuracy (n=220): 214/220 = 97.3%
+  Incorrectly triggered retrieval for:
+      [p064c] [st_information]  Kannst du die These der erhöhten Bundesausgaben im Sozialsek
+            Predicted: frozenset({('manifestos', (), ())})
+      [p064d] [st_information]  Wie wird die These der gesteigerten Sozialausgaben konkret f
+            Predicted: frozenset({('manifestos', (), ())})
+      [p064g] [st_information]  Welche konkreten Ausgestaltungsformen hat die These der erhö
+            Predicted: frozenset({('manifestos', (), ())})
+      [p064h] [st_information]  Wie wird die These der vergrößerten Bundesverantwortung im S
+            Predicted: frozenset({('manifestos', (), ())})
+      [p073d] [semantic_meaning]  Wie wird die freie Marktwirtschaft inhaltlich beschrieben?
+            Predicted: frozenset({('manifestos', (), ())})
+      [p074d] [semantic_meaning]  In welchem Umfang wird soziale Wohlfahrt verstanden?
+            Predicted: frozenset({('manifestos', (), ())})
+
+─────────────────────────────────────────────────────────────────
+  Per-category breakdown:
+  Category                    n     Precision   Recall    F1
+  ──────────────────────────  ────  ──────────  ────────  ──────
+  candidate_position          33    100.0%      93.9%     93.9%
+  candidate_vs_party          22    100.0%      100.0%    100.0%
+  current_affairs             55    100.0%      100.0%    100.0%
+  general_overview            55    100.0%      93.9%     95.6%
+  party_comparison            110   99.7%       100.0%    99.8%
+  party_ideology              55    69.1%       72.7%     52.1%
+  party_position              385   99.1%       99.1%     99.1%
+  party_rationale             77    93.5%       86.4%     87.0%
+  pol_knowledge               55    100.0%      100.0%    100.0%
+  pros_and_cons               55    100.0%      85.5%     85.5%
+  semantic_meaning            55    96.4%       100.0%    96.4%
+  st_information              55    92.7%       100.0%    92.7%
+
+─────────────────────────────────────────────────────────────────
+  Failures (F1 < 1.0)  — 109 cases:
+    [p016c] F1=0.00  [party_position]  Welche Haltung hat die Partei zur These über gleic
+          FP (unexpected): frozenset({('manifestos', (), ()), ('party_candidate_averages', (), ())})
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ()), ('party_candidate_averages', ('Grüne',), ())})
+    [p016g] F1=0.00  [party_position]  Welche Position vertritt die Partei zur These über
+          FP (unexpected): frozenset({('manifestos', (), ()), ('party_candidate_averages', (), ())})
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ()), ('party_candidate_averages', ('Grüne',), ())})
+    [p030d] F1=0.00  [party_position]  Welche Standpunkt nimmt die Partei zur These über 
+          FP (unexpected): frozenset({('manifestos', (), ())})
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ()), ('party_candidate_averages', ('Grüne',), ())})
+    [p037b] F1=0.00  [general_overview]  Wie wird die öffentliche Meinung zu dieser Frage g
+          FN (missed):     frozenset({('manifestos', (), ()), ('candidates', (), ()), ('party_candidate_averages', (), ())})
+    [p058f] F1=0.00  [candidate_position]  Wie ist ihre Meinung zu dieser These?
+          FN (missed):     frozenset({('candidates', (), ('Jacqueline Badran',))})
+    [p058j] F1=0.00  [candidate_position]  Ihre Haltung gegenüber der These
+          FN (missed):     frozenset({('candidates', (), ('Jacqueline Badran',))})
+    [p078c] F1=0.00  [pros_and_cons]  In welchem Umfang profitieren alle von einer freie
+          FN (missed):     frozenset({('manifestos', (), ())})
+    [p078d] F1=0.00  [pros_and_cons]  Welche Auswirkungen hat eine freie Marktwirtschaft
+          FN (missed):     frozenset({('manifestos', (), ())})
+    [p078e] F1=0.00  [pros_and_cons]  Was bringt die freie Marktwirtschaft mit sich und 
+          FN (missed):     frozenset({('manifestos', (), ())})
+    [p080d] F1=0.00  [pros_and_cons]  Welche Auswirkungen hätte ein stärkeres staatliche
+          FN (missed):     frozenset({('manifestos', (), ())})
+    [p080h] F1=0.00  [pros_and_cons]  Welche Auswirkungen hätte eine stärkere staatliche
+          FN (missed):     frozenset({('manifestos', (), ())})
+    [p080j] F1=0.00  [pros_and_cons]  Bedeutung eines erhöhten staatlichen Bildungseinsa
+          FN (missed):     frozenset({('manifestos', (), ())})
+    [p081b] F1=0.00  [pros_and_cons]  Inwiefern sind enge EU-Verbindungen für die Schwei
+          FN (missed):     frozenset({('manifestos', (), ())})
+    [p081h] F1=0.00  [pros_and_cons]  Inwieweit sind enge EU-Beziehungen für die Schweiz
+          FN (missed):     frozenset({('manifestos', (), ())})
+    [p095] F1=0.00  [party_ideology]  Wie würden Sie die SVP ideologisch einordnen?
+          FN (missed):     frozenset({('manifestos', ('SVP',), ())})
+    [p095b] F1=0.00  [party_ideology]  Wie würden Sie die SVP ideologisch einstufen?
+          FN (missed):     frozenset({('manifestos', ('SVP',), ())})
+    [p095e] F1=0.00  [party_ideology]  Wie würdest du die SVP ideologisch einordnen?
+          FN (missed):     frozenset({('manifestos', ('SVP',), ())})
+    [p095h] F1=0.00  [party_ideology]  Wie würden Sie die SVP ideologisch einstufen?
+          FN (missed):     frozenset({('manifestos', ('SVP',), ())})
+    [p096] F1=0.00  [party_ideology]  Sind die Grünen eine linke Partei?
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ())})
+    [p096a] F1=0.00  [party_ideology]  Können die Grünen als linke Partei bezeichnet werd
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ())})
+    [p096b] F1=0.00  [party_ideology]  Ist die Partei der Grünen eine linke politische Kr
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ())})
+    [p096c] F1=0.00  [party_ideology]  Wird die Partei der Grünen als linke Gruppierung a
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ())})
+    [p096d] F1=0.00  [party_ideology]  Kann die Grüne Partei als linke Bewegung klassifiz
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ())})
+    [p096f] F1=0.00  [party_ideology]  Finden die Grünen zu den Linken gehört?
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ())})
+    [p096g] F1=0.00  [party_ideology]  Könnten die Grünen als linke politische Kraft klas
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ())})
+    [p096h] F1=0.00  [party_ideology]  Wird die Partei der Grünen als linke Organisation 
+          FN (missed):     frozenset({('manifestos', ('Grüne',), ())})
+    [p097c] F1=0.00  [party_ideology]  Warum ist die Mitte-Partei die politische Mitte?
+          FN (missed):     frozenset({('manifestos', ('Mitte',), ())})
+    [p097e] F1=0.00  [party_ideology]  Was ist das Geheimnis, warum die Mitte-Partei die 
+          FN (missed):     frozenset({('manifestos', ('Mitte',), ())})
+    [p097g] F1=0.00  [party_ideology]  Welche Faktoren tragen dazu bei, dass die Mitte-Pa
+          FN (missed):     frozenset({('manifestos', ('Mitte',), ())})
+    [p004j] F1=0.67  [party_position]  Langfristige Vorteile freier Marktwirtschaft GLP
+          FN (missed):     frozenset({('party_candidate_averages', ('GLP',), ())})
+    [p051d] F1=0.67  [party_rationale]  Wie begründet die FDP ihre Unterstützung für die f
+          FN (missed):     frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p052b] F1=0.67  [party_rationale]  Welche Argumente stellt die SP in Bezug auf eine r
+          FN (missed):     frozenset({('party_candidate_averages', ('SP',), ())})
+    [p052g] F1=0.67  [party_rationale]  Welche Argumente stellt die SP in Bezug auf eine v
+          FN (missed):     frozenset({('party_candidate_averages', ('SP',), ())})
+    [p053c] F1=0.67  [party_rationale]  Welche Gründe gibt die SVP für die Ablehnung gröss
+          FN (missed):     frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p053h] F1=0.67  [party_rationale]  Welche Gründe nennt die SVP für die Ablehnung von 
+          FN (missed):     frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p053j] F1=0.67  [party_rationale]  Gründe für die SVP's Ablehnung von Sozialausgaben
+          FN (missed):     frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p054] F1=0.67  [party_rationale]  Welche Begründung liefern die Grünen für mehr staa
+          FN (missed):     frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p054a] F1=0.67  [party_rationale]  Welche Argumente geben die Grünen für ein stärkere
+          FN (missed):     frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p054b] F1=0.67  [party_rationale]  Welche Gründung liefern die Grünen für mehr staatl
+          FN (missed):     frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p054c] F1=0.67  [party_rationale]  Welche Gründe bringen die Grünen für ein stärkeres
+          FN (missed):     frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p054d] F1=0.67  [party_rationale]  Welche Begründung stellen die Grünen für ein höher
+          FN (missed):     frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p054f] F1=0.67  [party_rationale]  Was sind die Grünen Gründe für stärkeres Bildungsh
+          FN (missed):     frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p054g] F1=0.67  [party_rationale]  Welche Argumente geben die Grünen für ein stärkere
+          FN (missed):     frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p054h] F1=0.67  [party_rationale]  Welche Begründung liefern die Grünen für ein höher
+          FN (missed):     frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p055b] F1=0.67  [party_rationale]  Welche Gründe hat die GLP für stärkere EU-Verbindu
+          FN (missed):     frozenset({('party_candidate_averages', ('GLP',), ())})
+    [p055c] F1=0.67  [party_rationale]  Welche Motivation hat die GLP für engeren EU-Bezug
+          FN (missed):     frozenset({('party_candidate_averages', ('GLP',), ())})
+    [p055f] F1=0.67  [party_rationale]  Was ist der Grund, warum die GLP enger mit der EU 
+          FN (missed):     frozenset({('party_candidate_averages', ('GLP',), ())})
+    [p055g] F1=0.67  [party_rationale]  Können Sie die Gründe für die GLPs Forderung nach 
+          FN (missed):     frozenset({('party_candidate_averages', ('GLP',), ())})
+    [p055h] F1=0.67  [party_rationale]  Welche Argumente gibt die GLP für engeren EU-Bezug
+          FN (missed):     frozenset({('party_candidate_averages', ('GLP',), ())})
+    [p055j] F1=0.67  [party_rationale]  Gründe für GLPs EU-Nähe?
+          FN (missed):     frozenset({('party_candidate_averages', ('GLP',), ())})
+    [p056c] F1=0.67  [party_rationale]  Welche Argumente bringt die EVP vor?
+          FN (missed):     frozenset({('party_candidate_averages', ('EVP',), ())})
+    [p093] F1=0.67  [party_ideology]  Ist die FDP eher wirtschaftsliberal oder sozial au
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093a] F1=0.67  [party_ideology]  Ist die Freidemokratische Partei eher wirtschaftsl
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093b] F1=0.67  [party_ideology]  Hat die FDP eine wirtschaftsliberale oder soziale 
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093c] F1=0.67  [party_ideology]  Welche Richtung verfolgt die FDP hauptsächlich: wi
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093d] F1=0.67  [party_ideology]  Wie ist die politische Ausrichtung der FDP im Wirt
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093e] F1=0.67  [party_ideology]  Ist die FDP eher auf Wirtschaftsfreiheit fixiert o
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093f] F1=0.67  [party_ideology]  Wie steht's mit der FDP: mehr Wirtschaftsliberalis
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093g] F1=0.67  [party_ideology]  Welche wirtschaftliche Ausrichtung verfolgt die FD
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093h] F1=0.67  [party_ideology]  Wie ist die politische Präferenz der FDP im Wirtsc
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093i] F1=0.67  [party_ideology]  FDP: Wirtschaftsliberal oder sozial?
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p093j] F1=0.67  [party_ideology]  FDP-Richtung: Wirtschaft oder Soziales?
+          FP (unexpected): frozenset({('party_candidate_averages', ('FDP',), ())})
+    [p094] F1=0.67  [party_ideology]  Wo steht die SP auf dem politischen Spektrum?
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094a] F1=0.67  [party_ideology]  Wo befindet sich die SP im politischen Spektrum?
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094b] F1=0.67  [party_ideology]  Auf welcher Position steht die SP im politischen S
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094c] F1=0.67  [party_ideology]  Welche Position hat die SP im politischen Spektrum
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094d] F1=0.67  [party_ideology]  Wie ist die Position der SP im politischen Spektru
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094e] F1=0.67  [party_ideology]  Wo ist die SP im politischen Spektrum?
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094f] F1=0.67  [party_ideology]  Auf welcher Seite steht die SP politisch?
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094g] F1=0.67  [party_ideology]  Auf welcher Position befindet sich die SP im polit
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094h] F1=0.67  [party_ideology]  Welche politische Ausrichtung hat die SP im Spektr
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094i] F1=0.67  [party_ideology]  SP-Position?
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p094j] F1=0.67  [party_ideology]  Wo ist die SP im Spektrum?
+          FP (unexpected): frozenset({('party_candidate_averages', ('SP',), ())})
+    [p095a] F1=0.67  [party_ideology]  Wie würden Sie die SVP politisch einordnen?
+          FP (unexpected): frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p095c] F1=0.67  [party_ideology]  In welcher ideologischen Position würden Sie die S
+          FP (unexpected): frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p095d] F1=0.67  [party_ideology]  Wie würden Sie die SVP in Bezug auf ihre Ideologie
+          FP (unexpected): frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p095f] F1=0.67  [party_ideology]  In welcher ideologischen Richtung stehst du zur SV
+          FP (unexpected): frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p095g] F1=0.67  [party_ideology]  Wie würden Sie die SVP in Bezug auf ihre ideologis
+          FP (unexpected): frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p095j] F1=0.67  [party_ideology]  SVP ideologisch einordnen
+          FP (unexpected): frozenset({('party_candidate_averages', ('SVP',), ())})
+    [p096e] F1=0.67  [party_ideology]  Sind die Grünen wirklich links?
+          FP (unexpected): frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p096i] F1=0.67  [party_ideology]  Grünen als linke Partei?
+          FP (unexpected): frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p096j] F1=0.67  [party_ideology]  Linke Partei: Grünen?
+          FP (unexpected): frozenset({('party_candidate_averages', ('Grüne',), ())})
+    [p097a] F1=0.67  [party_ideology]  Was bestimmt die Mitte-Partei als politischen Mitt
+          FP (unexpected): frozenset({('party_candidate_averages', ('Mitte',), ())})
+    [p097b] F1=0.67  [party_ideology]  Welche Rolle spielt die Mitte-Partei als politisch
+          FP (unexpected): frozenset({('party_candidate_averages', ('Mitte',), ())})
+    [p097j] F1=0.67  [party_ideology]  Politische Mitte: Mitte-Partei?
+          FP (unexpected): frozenset({('party_candidate_averages', ('Mitte',), ())})
+    [p003i] F1=0.80  [party_position]  EVP's Standpunkt zu dieser Aussage?
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p037a] F1=0.80  [general_overview]  Wie ist die allgemeine politische Einstellung zu d
+          FN (missed):     frozenset({('candidates', (), ())})
+    [p037f] F1=0.80  [general_overview]  Wie sieht die Meinung der Parteien zur Sozialwohlf
+          FN (missed):     frozenset({('candidates', (), ())})
+    [p037h] F1=0.80  [general_overview]  Welche Positionen vertreten die politischen Partei
+          FN (missed):     frozenset({('candidates', (), ())})
+    [p037i] F1=0.80  [general_overview]  Sozialausgaben des Bundes erhöhen
+          FN (missed):     frozenset({('candidates', (), ())})
+    [p037j] F1=0.80  [general_overview]  Politische Haltung zur Sozialwohlfahrt
+          FN (missed):     frozenset({('candidates', (), ())})
+    [p039a] F1=0.80  [general_overview]  Welche Position vertritt die Schweizer Politik geg
+          FN (missed):     frozenset({('candidates', (), ())})
+    [p039h] F1=0.80  [general_overview]  Welche Position vertritt die Schweizer Politik geg
+          FN (missed):     frozenset({('candidates', (), ())})
+    [p043c] F1=0.80  [party_comparison]  Welche Haltung hat die GLP gegenüber der EVP in Be
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p052] F1=0.80  [party_rationale]  Welche Argumente bringt die SP gegen eine rein fre
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p052d] F1=0.80  [party_rationale]  Welche Kritikpunkte bringt die SP an einer reinen 
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p053] F1=0.80  [party_rationale]  Mit welchen Argumenten lehnt die SVP höhere Sozial
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p053a] F1=0.80  [party_rationale]  Mit welchen Gründen lehnt die SVP grössere Soziala
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p053b] F1=0.80  [party_rationale]  Mit welchen Argumenten ablehnt die SVP höhere Sozi
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p053d] F1=0.80  [party_rationale]  Welche Argumente bringt die SVP vor, um höhere Soz
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p053e] F1=0.80  [party_rationale]  Welche Gründe hat die SVP, höhere Sozialausgaben a
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p053f] F1=0.80  [party_rationale]  Was sind die Argumente der SVP gegen mehr Sozialau
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p053g] F1=0.80  [party_rationale]  Welche Argumente bringt die SVP vor, um höhere Soz
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p053i] F1=0.80  [party_rationale]  Argumente der SVP gegen höhere Sozialausgaben
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p054i] F1=0.80  [party_rationale]  Grüne Argumente für stärkeres Bildungshandeln
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p054j] F1=0.80  [party_rationale]  Grüne Gründe für mehr Bildungsausgaben
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p055] F1=0.80  [party_rationale]  Warum befürwortet die GLP engere EU-Beziehungen?
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p055d] F1=0.80  [party_rationale]  Warum fördert die GLP engeren EU-Beziehungen?
+          FP (unexpected): frozenset({('candidates', (), ())})
+    [p055e] F1=0.80  [party_rationale]  Warum will die GLP enger mit der EU zusammenarbeit
+          FP (unexpected): frozenset({('candidates', (), ())})
+
+=================================================================

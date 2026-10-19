@@ -1,0 +1,3 @@
+Retrieval metrics recomputed with the current evaluator code
+
+rewriting_v3                      n=682  R@5=37.1% P@5=31.8%  R@10=54.1% P@10=26.9%  R@20=68.9% P@20=18.9%  R@30=77.4% P@30=14.7%  MRR=0.5298
